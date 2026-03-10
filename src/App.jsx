@@ -1,15 +1,45 @@
 import './App.css'
 import StaggeredMenu from './components/StaggeredMenu'
 import Footer from './components/Footer'
+import SplitText from './components/SplitText'
+import BlurText from './components/BlurText'
 
 const menuItems = [
-  { label: 'Home', ariaLabel: 'Ir a Home', link: '#home' },
-  { label: 'Nosotros', ariaLabel: 'Ir a Nosotros', link: '#nosotros' },
-  { label: 'Proyectos', ariaLabel: 'Ir a Proyectos', link: '#proyectos' },
-  { label: 'Contacto', ariaLabel: 'Ir a Contacto', link: '#contacto' },
+  {
+    label: 'Home',
+    ariaLabel: 'Ir a Home',
+    link: '#home',
+    icon: '/icono-home.svg',
+  },
+  {
+    label: 'Nosotros',
+    ariaLabel: 'Ir a Nosotros',
+    link: '#nosotros',
+    icon: '/icono-nosotros.svg',
+  },
+  {
+    label: 'Proyectos',
+    ariaLabel: 'Ir a Proyectos',
+    link: '#proyectos',
+    icon: '/icono-proyectos.svg',
+  },
+  {
+    label: 'Contacto',
+    ariaLabel: 'Ir a Contacto',
+    link: '#contacto',
+    icon: '/icono-contacto.svg',
+  },
 ]
 
 function App() {
+  const handleSubtitleComplete = () => {
+    console.log('La animación del subtítulo terminó')
+  }
+
+  const handleTitleComplete = () => {
+    console.log('La animación del título terminó')
+  }
+
   return (
     <>
       <main className="hero-container" id="home">
@@ -29,8 +59,28 @@ function App() {
         </div>
 
         <div className="hero-center">
-          <h1 className="hero-title">VEYOR</h1>
-          <p className="hero-subtitle">Desarrolladora inmobiliaria</p>
+          <BlurText
+            text="VEYOR"
+            delay={120}
+            animateBy="chars"
+            direction="top"
+            onAnimationComplete={handleTitleComplete}
+            className="hero-title"
+            as="h1"
+          />
+
+          <SplitText
+            text="Desarrolladora Inmobiliaria"
+            className="hero-subtitle"
+            delay={45}
+            duration={0.9}
+            ease="power3.out"
+            from={{ opacity: 0, y: 18 }}
+            to={{ opacity: 1, y: 0 }}
+            textAlign="center"
+            tag="p"
+            onLetterAnimationComplete={handleSubtitleComplete}
+          />
         </div>
 
         <div className="menu-layer">
@@ -42,7 +92,7 @@ function App() {
             menuButtonColor="#ffffff"
             openMenuButtonColor="#111111"
             changeMenuColorOnOpen={true}
-            accentColor="#8f8f8f"
+            accentColor="#ff7a00"
             colors={['#d9d9d9', '#ffffff']}
             closeOnClickAway={true}
           />
