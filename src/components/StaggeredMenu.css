@@ -180,14 +180,14 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.4rem;
 }
 
 .sm-panel-item {
   position: relative;
   color: #000;
   font-weight: 600;
-  font-size: 3.5rem;
+  font-size: 2.2rem;
   cursor: pointer;
   line-height: 1;
   letter-spacing: -2px;
@@ -306,4 +306,16 @@
   .staggered-menu-wrapper[data-open] .sm-logo-img {
     filter: invert(100%);
   }
+}
+
+.sm-panel-itemLabel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sm-menu-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
