@@ -477,3 +477,189 @@
     transform: translateY(10px);
   }
 }
+
+/* CONTACTO */
+
+.contacto-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+.contacto-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(125% 125% at 50% 90%, #000000 40%, #0d1a36 100%);
+}
+
+.contacto-section {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 5rem;
+}
+
+.contacto-container {
+  position: relative;
+  z-index: 2;
+}
+
+.contacto-card {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr;
+  min-height: 620px;
+  border-radius: 32px 0 32px 0;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 166, 0, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.contacto-card-image {
+  background: linear-gradient(135deg, #080808 0%, #10182f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contacto-card-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.contacto-card-form {
+  background: #f5f5f3;
+  color: #111111;
+  padding: 2.4rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacto-card-form h1 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.contacto-card-form > p {
+  margin: 0 0 1.8rem;
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  border-radius: 14px;
+  background: transparent;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #111111;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+  color: #9a9a9a;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #ffb347;
+  box-shadow: 0 0 0 3px rgba(255, 179, 71, 0.15);
+}
+
+.contacto-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contacto-textarea-wrap {
+  position: relative;
+}
+
+.contacto-counter {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #8b8b8b;
+}
+
+.contacto-tyc {
+  margin: 0.3rem 0 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444444;
+}
+
+.contacto-tyc a {
+  color: #2d63ff;
+  text-decoration: underline;
+}
+
+.contacto-btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  background: #f7a600;
+  color: #111111;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.contacto-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(247, 166, 0, 0.28);
+  background: #ffb300;
+}
+
+@media (max-width: 991px) {
+  .contacto-section {
+    padding: 6.5rem 0 4rem;
+  }
+
+  .contacto-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .contacto-card-image {
+    padding: 2.5rem 1.5rem 1rem;
+  }
+
+  .contacto-card-image img {
+    max-width: 360px;
+  }
+
+  .contacto-card-form {
+    padding: 2rem 1.4rem;
+  }
+}
