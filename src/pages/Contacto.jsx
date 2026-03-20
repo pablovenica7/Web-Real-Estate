@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import StaggeredMenu from '../components/StaggeredMenu'
+import TextPressure from '../components/TextPressure'
 
 const menuItems = [
   { label: 'Home', link: '/', icon: '/icono-home.svg' },
@@ -37,7 +38,28 @@ function Contacto() {
         />
       </div>
 
-      <section className="contacto-section">
+      <section className="contacto-hero">
+        <div className="contacto-hero-text">
+          <TextPressure
+            text="CONTACTO"
+            flex
+            alpha={false}
+            stroke={false}
+            width
+            weight
+            italic
+            textColor="#ffffff"
+            strokeColor="#ff7a00"
+            minFontSize={36}
+          />
+        </div>
+
+        <a href="#contacto-card-section" className="scroll-down-nosotros">
+          <img src="/icono-flecha.png" alt="Bajar a formulario de contacto" />
+        </a>
+      </section>
+
+      <section id="contacto-card-section" className="contacto-section">
         <div className="container contacto-container">
           <div className="contacto-card">
             <div className="contacto-card-image">
