@@ -10,25 +10,25 @@ function Footer() {
 
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/" className="nav-link p-0 text-body-secondary">
                   Home
                 </a>
               </li>
 
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/nosotros" className="nav-link p-0 text-body-secondary">
                   Nosotros
                 </a>
               </li>
 
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/proyectos" className="nav-link p-0 text-body-secondary">
                   Proyectos
                 </a>
               </li>
 
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/contacto" className="nav-link p-0 text-body-secondary">
                   Contacto
                 </a>
               </li>
