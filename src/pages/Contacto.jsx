@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import StaggeredMenu from '../components/StaggeredMenu'
 
@@ -8,6 +9,8 @@ const menuItems = [
 ]
 
 function Contacto() {
+  const [mensaje, setMensaje] = useState('')
+
   return (
     <main className="contacto-page">
       <div className="contacto-background" />
@@ -56,10 +59,12 @@ function Contacto() {
                 <div className="contacto-textarea-wrap">
                   <textarea
                     placeholder="Escribí tu consulta aquí..."
-                    maxLength="500"
+                    maxLength={500}
                     rows="6"
+                    value={mensaje}
+                    onChange={(e) => setMensaje(e.target.value)}
                   />
-                  <span className="contacto-counter">0/500</span>
+                  <span className="contacto-counter">{mensaje.length}/500</span>
                 </div>
 
                 <p className="contacto-tyc">
